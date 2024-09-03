@@ -1,0 +1,8 @@
+compose.yaml
+Dockerfile
+.dockerignore
+hosts
+k8s-configuration
+nginx.conf
+playbook.yaml
+.venv
