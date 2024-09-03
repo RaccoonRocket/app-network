@@ -1,5 +1,4 @@
 compose.yaml
-Dockerfile
 .dockerignore
 hosts
 k8s-configuration
