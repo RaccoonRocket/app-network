@@ -10,8 +10,9 @@ pipeline {
     stage('Building') {
       steps {
         sh '''docker --version
-sudo apt-get install docker-compose
-docker-compose --version'''
+docker build -t image-app .
+docker run -p 5000:5000 image-app
+docker ps'''
       }
     }
 
