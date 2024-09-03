@@ -10,7 +10,7 @@ pipeline {
     stage('Building') {
       steps {
         sh '''docker --version
-apt install docker-compose
+sudo apt-get install docker-compose
 docker-compose --version'''
       }
     }
