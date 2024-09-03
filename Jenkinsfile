@@ -7,9 +7,11 @@ pipeline {
       }
     }
 
-    stage('') {
+    stage('Building') {
       steps {
-        sh 'docker --version && docker-compose --version'
+        sh '''docker --version
+apt install docker-compose
+docker-compose --version'''
       }
     }
 
