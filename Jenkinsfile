@@ -1,6 +1,10 @@
 pipeline {
-  agent docker-agent-python
-  
+  agent {
+    node {
+      label 'docker-agent-python'
+      }
+  }
+
   stages {
     stage('Checkout') {
       steps {
