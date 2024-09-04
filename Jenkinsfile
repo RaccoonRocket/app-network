@@ -10,6 +10,7 @@ pipeline {
     stage('Building') {
       steps {
         sh '''docker --version
+ls -la
 docker build -t image-app .
 docker run -p 5000:5000 image-app
 docker ps'''
