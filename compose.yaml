@@ -1,6 +1,6 @@
 services:
   flask:
-    image: scoutjam/flask-wndt-db:1.0
+    image: scoutjam/flask-wndt-db:1.1.1
     networks:
       - app-network
     ports:

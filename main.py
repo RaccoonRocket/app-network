@@ -1,20 +1,22 @@
 from flask import Flask, render_template
 import psycopg2, redis
+from prometheus_flask_exporter import PrometheusMetrics
 
 app = Flask(__name__) 
+metrics = PrometheusMetrics(app)
 
 def conn_pg():
     pg = psycopg2.connect(
         database="postgres", 
         user="postgres", 
         password="password", 
-        host="172.20.0.3", 
+        host="postgres", 
         port="5432"
     )
     return pg
 
 def conn_r():
-    return redis.Redis(host='172.20.0.2', port='6379', decode_responses=True)
+    return redis.Redis(host='redis', port='6379', decode_responses=True)
 
 
 @app.route("/")
