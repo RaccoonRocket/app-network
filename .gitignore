@@ -4,3 +4,5 @@ k8s-configuration
 nginx.conf
 playbook.yaml
 .venv
+elk
+prometheus

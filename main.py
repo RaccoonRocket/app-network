@@ -1,8 +1,10 @@
 from flask import Flask, render_template
 import psycopg2, redis
+import logging
 from prometheus_flask_exporter import PrometheusMetrics
 
 app = Flask(__name__) 
+logging.basicConfig(filename='/app/logs/app.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 metrics = PrometheusMetrics(app)
 
 def conn_pg():
